@@ -1,0 +1,10 @@
+image:
+  repository: tejirih/static-site
+  tag: latest
+
+replicaCount: 2
+
+service:
+  port: 80
+
+

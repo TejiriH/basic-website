@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment   # This will be replaced with the release name
+  labels:
+    app: {{ .Release.Name }}   # This ensures the label matches the release name
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}   # Selector uses the release name
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}   # Template also uses the release name
+    spec:
+      containers:
+        - name: {{ .Release.Name }}   # Container name matches the release name
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 80
+
