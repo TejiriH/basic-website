@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image: 
-  repository: tejirih/my-webapp
+  repository: tejirih/custom-nginx
   tag: latest
 
 service:
