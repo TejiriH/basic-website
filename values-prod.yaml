@@ -1,6 +1,7 @@
 replicaCount: 1
 
-image: service:tejirih/static-site
+image:
+  repository: tejirih/static-site
   tag: latest
 
 service:

@@ -1,6 +1,7 @@
 replicaCount: 1
 
-image: service:tejirih/my-app
+image:
+  repository: tejirih/my-app
   tag: latest
 
 service:

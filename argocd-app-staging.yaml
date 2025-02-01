@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/TejiriH/basic-website.git
     targetRevision: HEAD
-    path: argocd-app-staging
+    path: "."
     helm:
       valueFiles:
         - values-staging.yaml
